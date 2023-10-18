@@ -7,8 +7,8 @@ import { FooterNewsroom } from './components/FooterNewsroom'
 
 
 
-function App() {
-  return (
+const App = () => (
+ <main>
     <ThemeProvider theme={{ fonts: FONTS }} >
        <WebsiteLogo/>   
       <NavBar />
@@ -17,7 +17,7 @@ function App() {
       <FooterNewsroom/>
       
     </ThemeProvider>
-  );
-}
+   </main>
+)
 
 export default App;

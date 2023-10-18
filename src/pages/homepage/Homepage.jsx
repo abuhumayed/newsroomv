@@ -8,7 +8,7 @@ import articles from "../../data/articles.json"
 import QuickInfoCard from '../../components/QuickInfoCard/quickInfoCard'
 import quick from "../../data/quick.json"
 
-function Homepage(props) {
+function Homepage() {
   return (
     <StyledContainer>
       <div className="content">
