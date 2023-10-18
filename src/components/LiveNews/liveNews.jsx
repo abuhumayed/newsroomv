@@ -1,38 +1,43 @@
-import{ useState, useEffect } from 'react';
-import { StyledContainer } from './liveNews.styles'
+import  { useState, useEffect } from 'react';
+import axios from 'axios';
+import { StyledContainer } from './liveNews.styles';
 
 const News = () => {
   const [newsData, setNewsData] = useState([]);
 
   useEffect(() => {
-    const apiKey = 'e95a847233f24e628c2f6acd780de6db'; // My actual NewsAPI key
-    const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+    const apiKey = '0d7160397647d12964b734ce9b0778ba'; // Replace with your GNews API key
+    const apiUrl = `https://gnews.io/api/v4/top-headlines?token=${apiKey}&lang=en`;
 
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => setNewsData(data.articles))
+    axios
+      .get(apiUrl)
+      .then(response => setNewsData(response.data.articles))
       .catch(error => console.error('Error fetching news:', error));
   }, []);
 
-    return (
-      <StyledContainer>
-    <div className='liveNews'>
-      <h1>Latest Updates</h1>
-      <ul>
-        {newsData.map((article, index,description, publishedAt) => (
-            <li key={index}>
-            <h2 key={article}>{article.title}</h2>
-            <p key={description}>{article.description}</p>
-            <a key={publishedAt} href={article.url} target="_blank" rel="noopener noreferrer" >
-              Read more  
-                </a>
-                <span className="liveAuthor">{article.author}</span>
-          </li>
-        ))}
-      </ul>
-            </div>
-     </StyledContainer>
+  return (
+    <StyledContainer>
+      <div className="liveNews">
+        <h1>Latest Updates</h1>
+        <ul>
+          {newsData.map(article => (
+            <li key={article.url}>
+              <h2>{article.title}</h2>
+              <p>{article.description}</p>
+              <a href={article.url} target="_blank" rel="noopener noreferrer">
+                Read more
+              </a>
+              <span className="liveAuthor">{article.source.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </StyledContainer>
   );
 };
 
 export default News;
+
+
+
+

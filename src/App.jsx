@@ -8,16 +8,16 @@ import { FooterNewsroom } from './components/FooterNewsroom'
 
 
 const App = () => (
- <main>
+  <main>
     <ThemeProvider theme={{ fonts: FONTS }} >
-       <WebsiteLogo/>   
+      <WebsiteLogo />
       <NavBar />
       <Homepage />
       
-      <FooterNewsroom/>
+      <FooterNewsroom />
       
     </ThemeProvider>
-   </main>
-)
+  </main>
+);
 
 export default App;
