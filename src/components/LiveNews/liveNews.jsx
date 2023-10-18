@@ -26,7 +26,7 @@ const News = () => {
             <a href={article.url} target="_blank" rel="noopener noreferrer" >
               Read more  
                 </a>
-                <span class="liveAuthor">       {article.author}</span>
+                <span className="liveAuthor">{article.author}</span>
           </li>
         ))}
       </ul>
