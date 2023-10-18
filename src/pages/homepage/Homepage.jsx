@@ -20,6 +20,7 @@ function Homepage(props) {
             {/* Mapping through articles JSON file array */}
             {articles.map(({urlToImage,title,description,commentCount,likeCount}) => (
               <ArticleCard
+                key = {title}
                 img={urlToImage}
                 title={title}
                 description={description}
@@ -38,6 +39,7 @@ function Homepage(props) {
             
             {quick.map(({title,description})=> (
               <QuickInfoCard
+                key = {title}
               title={title}
               description={description}
               />

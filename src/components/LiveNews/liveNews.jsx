@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import{ useState, useEffect } from 'react';
 import { StyledContainer } from './liveNews.styles'
 
 const News = () => {
@@ -21,9 +21,9 @@ const News = () => {
       <ul>
         {newsData.map((article, index,description, publishedAt) => (
             <li key={index}>
-            <h2>{article.title}</h2>
-            <p>{article.description}</p>
-            <a href={article.url} target="_blank" rel="noopener noreferrer" >
+            <h2 key={article}>{article.title}</h2>
+            <p key={description}>{article.description}</p>
+            <a key={publishedAt} href={article.url} target="_blank" rel="noopener noreferrer" >
               Read more  
                 </a>
                 <span className="liveAuthor">{article.author}</span>
