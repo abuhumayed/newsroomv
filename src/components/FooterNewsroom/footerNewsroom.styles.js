@@ -6,7 +6,12 @@ export const StyledContainer = styled.div`
   color: white;
   padding: 20px 0;
   text-align: center;
-  font-family: ${(props)=> props.theme.fonts.primary};
+  font-family: ${(props) => props.theme.fonts.primary};
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
 }
 
 .footer-content {

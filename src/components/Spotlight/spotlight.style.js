@@ -5,7 +5,12 @@ export const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin-left:5rem;
+    
+    
     padding-top: 50px;
+   
 
     .title{
        font-size: 130px;
@@ -13,6 +18,9 @@ export const StyledContainer = styled.div`
 
     }
     .description{
+
+       
+        width: fit-content;
         font-size:20px;
         font-family: ${(props) => props.theme.fonts.primary};
         text-transform: uppercase;

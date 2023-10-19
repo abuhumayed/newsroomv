@@ -21,7 +21,7 @@ function Homepage() {
             {articles.map(({urlToImage,title,description,commentCount,likeCount}) => (
               <ArticleCard
                 key = {title}
-                img={urlToImage}
+                img ={urlToImage}
                 title={title}
                 description={description}
                 commentCount={commentCount}

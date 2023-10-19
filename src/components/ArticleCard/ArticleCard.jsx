@@ -7,7 +7,7 @@ function ArticleCard({img,title,description,likeCount,commentCount}) {
   return (
     <StyledContainer>
         <div className="article-card">
-                      <img src={img} alt="" />
+                      <img  src={img} alt="" />
               <div className="title">{ title }</div>
                       <div className="divider"/>
               <div className="description">{ description}</div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { ModelDiamond as Icon } from "react-basicons";
 import { StyledContainer} from './spotlight.style';
 
