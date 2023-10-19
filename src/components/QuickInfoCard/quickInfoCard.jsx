@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledContainer } from './quickInfoCard.styles';
 
 function QuickInfoCard({title,description}) {

@@ -1,10 +1,10 @@
-import React from 'react'
+
 import { StyledContainer } from './navBar.styles'
 
 export default function NavBar() {
     return (
     <StyledContainer>
-    <div>
+    <div className='nav-bar'>
           <div className="nav-items">
               <span>
               <a href="/">Home</a>

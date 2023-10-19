@@ -5,6 +5,12 @@ width: 100%;
 
 position: sticky;
   top: 0;
+
+.nav-bar{
+    width: fit-content;
+    margin: auto;
+}
+
 .nav-items{
 position: sticky;
 width:100%;

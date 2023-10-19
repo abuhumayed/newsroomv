@@ -22,7 +22,7 @@ const News = () => {
         <ul>
           {newsData.map(article => (
             <li key={article.url}>
-              <h2>{article.title}</h2>
+              <h2 className='title'>{article.title}</h2>
               <p>{article.description}</p>
               <a href={article.url} target="_blank" rel="noopener noreferrer">
                 Read more

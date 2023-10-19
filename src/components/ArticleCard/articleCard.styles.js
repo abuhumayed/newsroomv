@@ -8,7 +8,8 @@ flex-direction: column;
     max-width: 400px;
     align-items: center;
     img{
-                  max-width: 400px;
+                  
+                  width: min(100%,400px);
     }
 
     .title{
@@ -20,12 +21,14 @@ flex-direction: column;
     }
 
     .divider{
+        
         margin-top: 13px;
         margin-bottom: 2px;
         height : 1px;
-        width: 45%;
+        width: 100%;
         border-radius: 10px;
         background-color: black;
+        
        
     }
 
@@ -42,6 +45,7 @@ flex-direction: column;
     }
 
     .data-section{
+       
         display : flex;
         justify-content: space-between;
         align-items: center ;
